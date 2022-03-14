@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>soAwesome</title>
+</head>
+    <body>
+        <h1>You're not gonna believe how awesome this is</h1>
+            <p>Piles and piles of content things you wouldn't believe you could find here!</p>
+        <h2>It's like a veil... has been lifted... </h2>
+            <p>Did I tell you about that one time I injected this random Javascript formula into this paragraph?<script>    console.log('hello world');
+                </script>
+            </p>
+    </body>
+</html>

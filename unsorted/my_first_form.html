@@ -1,0 +1,120 @@
+<html>
+	<head>
+    <title>My First HTML Form</title>
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+  <body>
+    <h2 class="fancy-header">User Login</h2>
+      <form method="POST" action="http://request-inspector.glitch.me/">
+        <p>
+          <label for="username">Username</label>
+          <input id="username" name="username"
+           type="text" placeholder="Enter your username">
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password"type="text"
+           placeholder="Open Sesame">
+        </p>
+        <p>
+          <button type="submit">Login</button>
+        </p>
+      </form>
+    <h2 class="fancy-header">Compose An Email</h2>
+      <form method="POST" action="http://request-inspector.glitch.me/">
+        <p>
+          <input type="checkbox" id="save_copy" name="save_copy" value="yes" checked>
+          <label for="save_copy">Would you like to save a copy to your sent folder?</label>
+        </p>
+        <p>
+          <button type="Compose">Compose</button>
+        </p>
+      </form>
+    <h2 class="fancy-header">Multiple-Choice Test</h2>
+      <p>
+        What is your favorite ice cream?
+      </p>
+        <form method="POST" action="http://request-inspector.glitch.me/">
+        <label>
+            <input type="radio" name="q1" value="Chocolate">
+            Chocolate
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Vanilla">
+            Chocolate
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Vegan">
+            I cannot eat ice cream
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Frozen Yogurt">
+            I am wierd
+        </label>
+        </form>
+      <p>
+        What type of vehicle would you like to purchase next?
+      </p>
+        <form method="POST" action="http://request-inspector.glitch.me/">
+        <label>
+            <input type="radio" name="q1" value="Looks Fast">
+            Ford Mach E
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Spaceship">
+            Tesla
+        </label>
+        <label>
+            <input type="radio" name="q1" value="This is the Way">
+            E F-150
+        </label>
+        <label>
+            <input type="radio" name="q1" value="Your only choice in 5 years">
+            Another EV
+        </label>
+        </form>
+      <p>
+        What is your favorite food?
+      </p>
+        <form method="POST" action="http://request-inspector.glitch.me/">
+          <label>
+            <input type="radio" name="q1" value="Ich bin ein Berliner">
+            Jelly Donuts!
+          </label>
+          <label>
+            <input type="radio" name="q1" value="Parli italiano">
+            Pizza!
+          </label>
+
+            <input type="radio" name="q1" value="This is the Way">
+            It's private
+          <label>
+            <input type="radio" name="q1" value="May the forks be with you">
+            Polystarch Portion Bread
+          </label>
+          <button type="submit">Check Test</button>
+        </form>
+      <p>
+        How many times have you seen Star Wars Episode IV?
+      </p>
+        <form method="POST" action="http://request-inspector.glitch.me/">
+          <label for="views">Views</label>
+            <select id="views" name="views[]" multiple>
+                <option value="1">Once</option>
+                <option value="2">Twice</option>
+                <option value="acceptable">Alot</option>
+                <option value="I cannot">I cannot</option>
+                <option value="dontgetout">I live under a rock</option>
+                <option value="rainforest">não é possivel</option>
+            </select>
+        </form>
+      <h2 class="fancy-header">Select Testing</h2>
+        <form method="POST" action="http://request-inspector.glitch.me/">
+          <label for="question">Do you like questions?</label>
+            <select id="question" name="question">
+                <option value="1">Yes</option>
+                <option selected value="0">No</option>
+            </select>
+        </form>
+  </body>
+</html>
