@@ -83,8 +83,8 @@ var total = prompt("what is the total?");
 // * bill, and return the amount to tip
 var tipAmount;
 function calculateTip(tip, total) {
-    var tipAmount = tip/100 * total;
-    console.log("you should tip " + tipAmount);
+    var tipAmount = tip * total;
+    alert(console.log("you should tip " + tipAmount));
     return tipAmount;
 }
 
@@ -123,7 +123,7 @@ calculateTip(tip, total);
 
 function applyDiscount(price, percOff) {
     var newPrice = (percOff)/100*price;
-    console.log("the new price of the item is " + newPrice);
+    console.log(newPrice);
     return newPrice;
 }
 var coffeeMaker = 129.99;
