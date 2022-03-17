@@ -239,35 +239,42 @@ calculatedTotal(myLuckyNumber, total);
 //  * number, then use 3 separate alerts to tell the user:
 
 function numberThings() {
-    var doNumberThings = confirm("Would you like to enter a number?");
+    var doNumberThings = confirm("Would you like to enter a number? If so hit OK");
     if (doNumberThings === true) {
-        var userNumber = prompt("please enter a finite whole-number as a number type,\nfractions and decimals will be rounded down");
-        userNumber = Math.floor(userNumber);
-        if ((typeof userNumber) === "number") {
+        continue;
+    }
+    else {
+        var cancel = confirm("are you sure you want to quit? if not hit CANCEL and make sure your input is a number...")
+        if (cancel === true) {
+            break;
+        }
+        else{
+            numberThings();
+        }
+    }
+    var userNumber = prompt("please enter a finite whole-number as a number type,\nfractions and decimals will be rounded down");
+    userNumber = Math.floor(userNumber);
 
+    if ((typeof userNumber) === "number") {
+        var isOdd = (userNumber % 2 !== 0);
+        var isPlussed = Number(userNumber) + 100;
 
-            var isOdd = (userNumber % 2 !== 0);
-            var isPlussed = Number(userNumber) + 100;
-
-
-            if (isOdd === true) {
-                alert('This number is odd...');
-            } else {
-                alert('This number is even...');
-
-            }
-            alert("The number plus 100 is " + isPlussed + " ...");
-
-            if (userNumber < 0) {
-                alert("The number is negative");
-            } else if (userNumber > 0) {
-                alert("The number is positive");
-            } else {
-                alert("when yer up yer up, and when yer down yer down, and when yer only half way up, yer neither up nor down")
-            }
+        if (isOdd === true) {
+            alert('This number is odd...');
         }
         else {
-        numberThings();
+            alert('This number is even...');
+        }
+        alert("The number plus 100 is " + isPlussed + " ...");
+
+        if (userNumber < 0) {
+            alert("The number is negative");
+        }
+        else if (userNumber > 0) {
+            alert("The number is positive");
+        }
+        else {
+            alert("when yer up yer up, and when yer down yer down,\nand when yer only half way up, yer neither up nor down...\nis zero a number... hmmm?")
         }
     }
 }
