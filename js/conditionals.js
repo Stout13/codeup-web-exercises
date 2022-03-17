@@ -159,30 +159,44 @@ function calculatedTotal(myLuckyNumber, total) {
         case 1:
             var paid = 1-.1;
             var newTotal = paid*total;
-            alert("congrats, your number is " + "1" + " and your new total is " +newTotal);
+            alert("congrats, your number is " +"1");
+            alert(" and your new total is " +newTotal);
+            alert("you would have paid " + total);
+
             return newTotal;
         case 2:
             var paid = 1-.25;
             var newTotal = paid*total;
-            alert("congrats, your number is " + "2" + " and your new total is " +newTotal);
+            alert("congrats, your number is " + "2")
+            alert(" and your new total is " +newTotal);
+            alert("you would have paid " + total);
+
             return newTotal;
         case 3:
             var paid = 1-.35;
             var newTotal = paid*total;
-            alert("congrats, your number is " + "3" + " and your new total is " +newTotal);
+            alert("congrats, your number is " + "3" );
+            alert(" and your new total is " +newTotal);
+            alert("you would have paid " + total);
+
             return newTotal;
         case 4:
             var paid = 1-.5;
             var newTotal = paid*total;
-            console.log("congrats, your number is " + "4" + " and your new total is " +newTotal);
+            alert("congrats, your number is " + "4");
+            alert(" and your new total is " +newTotal);
+            alert("you would have paid " + total);
             return newTotal;
         case 5:
             var paid = 1-1;
             var newTotal = paid*total;
-            console.log("congrats, your number is " + "5" + " and your new total is " +newTotal);
+            alert("congrats, your number is " + "5");
+            alert(" and your new total is " +newTotal);
+            alert("you would have paid " + total);
+
             return newTotal;
         default:
-            console.log("some dogs just won't hunt");
+            alert("some dogs just won't hunt");
             return;
 
     }
