@@ -118,7 +118,7 @@ function analyzeColor(color) {
 
         default:
 
-            return 'wow, is that a real color?';
+            return 'wow, is that a real color\?\n I don\'t have a response for that';
     }
 }
 
@@ -151,6 +151,9 @@ alert(analyzeColor(userInputColor));
 //  * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
 //  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
 //  * everything for free!.
+
+
+
 var myLuckyNumber = Math.floor(Math.random() * 6);
 var total = prompt('how much are your groceries?');
 
@@ -186,6 +189,7 @@ function calculatedTotal(myLuckyNumber, total) {
             alert("congrats, your number is " + "4");
             alert(" and your new total is " +newTotal);
             alert("you would have paid " + total);
+
             return newTotal;
         case 5:
             var paid = 1-1;
@@ -196,9 +200,9 @@ function calculatedTotal(myLuckyNumber, total) {
 
             return newTotal;
         default:
-            alert("some dogs just won't hunt");
-            return;
+            alert("some dogs just won't hunt.  Your number is 0, you get no discount today\n and the amount you will pay is unchanged and is " +total);
 
+            return;
     }
 }
 
@@ -237,29 +241,34 @@ calculatedTotal(myLuckyNumber, total);
 function numberThings() {
     var doNumberThings = confirm("Would you like to enter a number?");
     if (doNumberThings === true) {
-        var userNumber = prompt("aight, shoot ya shot");
-    }
-    var isOdd = (userNumber % 2 !== 0);
-    var isPlussed = Number(userNumber) + 100;
+        var userNumber = prompt("please enter a finite whole-number as a number type,\nfractions and decimals will be rounded down");
+        userNumber = Math.floor(userNumber);
+        if ((typeof userNumber) === "number") {
 
 
-    if (isOdd === true) {
-        alert('This number is odd...');
-    }
-    else {
-        alert('This number is even...');
+            var isOdd = (userNumber % 2 !== 0);
+            var isPlussed = Number(userNumber) + 100;
 
-    }
-    alert("The number plus 100 is " + isPlussed + " ...");
 
-    if (userNumber<0) {
-        alert("The number is negative");
-    }
-    else if (userNumber>0) {
-        alert("The number is positive");
-    }
-    else {
-        alert("when yer up yer up, and when yer down yer down, and when yer only half way up, yer neither up nor down")
+            if (isOdd === true) {
+                alert('This number is odd...');
+            } else {
+                alert('This number is even...');
+
+            }
+            alert("The number plus 100 is " + isPlussed + " ...");
+
+            if (userNumber < 0) {
+                alert("The number is negative");
+            } else if (userNumber > 0) {
+                alert("The number is positive");
+            } else {
+                alert("when yer up yer up, and when yer down yer down, and when yer only half way up, yer neither up nor down")
+            }
+        }
+        else {
+        numberThings();
+        }
     }
 }
 
