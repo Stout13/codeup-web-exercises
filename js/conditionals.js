@@ -102,7 +102,7 @@ function analyzeColor(color) {
 
         case 'green':
 
-            return "Dost lead the revels of the May;/nAnd this is thy dominion.";
+            return "Dost lead the revels of May\nAnd this is thy dominion.";
 
         case 'blue':
 
@@ -121,12 +121,13 @@ function analyzeColor(color) {
             return 'wow, is that a real color?';
     }
 }
+
 analyzeColor(randomColor);
 
 
 
 
-// *
+//  *
 //  * TODO:
 //  * Prompt the user for a color when the page loads, and pass the input from the
 
@@ -150,33 +151,39 @@ alert(analyzeColor(userInputColor));
 //  * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
 //  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
 //  * everything for free!.
+var myLuckyNumber = Math.floor(Math.random() * 6);
+var total = prompt('how much are your groceries?');
 
-function calculatedTotal(luckyNumber, total) {
-    switch (luckyNumber) {
+function calculatedTotal(myLuckyNumber, total) {
+    switch (myLuckyNumber) {
         case 1:
             var paid = 1-.1;
             var newTotal = paid*total;
+            alert("congrats, your number is " + "1" + " and your new total is " +newTotal);
             return newTotal;
         case 2:
             var paid = 1-.25;
             var newTotal = paid*total;
+            alert("congrats, your number is " + "2" + " and your new total is " +newTotal);
             return newTotal;
         case 3:
             var paid = 1-.35;
             var newTotal = paid*total;
+            alert("congrats, your number is " + "3" + " and your new total is " +newTotal);
             return newTotal;
         case 4:
             var paid = 1-.5;
             var newTotal = paid*total;
+            console.log("congrats, your number is " + "4" + " and your new total is " +newTotal);
             return newTotal;
-        case 4:
+        case 5:
             var paid = 1-1;
             var newTotal = paid*total;
+            console.log("congrats, your number is " + "5" + " and your new total is " +newTotal);
             return newTotal;
         default:
-            console.log("that's not a lucky number!");
-            calculatedTotal(luckyNumber);
-            continue;
+            console.log("some dogs just won't hunt");
+            return;
 
     }
 }
@@ -184,13 +191,13 @@ function calculatedTotal(luckyNumber, total) {
 //  * Write a function named `calculateTotal` which accepts a lucky number and total
 //  * amount, and returns the discounted price.
 
-
+calculatedTotal(myLuckyNumber, total);
 
 //  * Example:
 //  * calculateTotal(0, 100) // returns 100
 //  * calculateTotal(4, 100) // returns 50
 //  * calculateTotal(5, 100) // returns 0
-//  *
+
 //  * Test your function by passing it various values and checking for the expected
 //  * return value.
 
@@ -198,18 +205,51 @@ function calculatedTotal(luckyNumber, total) {
 //  * TODO:
 //  * Uncomment the line below to generate a random number between 0 and 5.
 //  * (In this line of code, 0 is inclusive, and 6 is exclusive)
+
+
+
 //  * Prompt the user for their total bill, then use your `calculateTotal` function
 //  * and alerts to display to the user what their lucky number was, what their
 //  * price before the discount was, and what their price after the discount is.
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
 
 // *
 //  * TODO:
 //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
 //  * would like to enter a number. If they click 'Ok', prompt the user for a
 //  * number, then use 3 separate alerts to tell the user:
-//  *
+
+function numberThings() {
+    var doNumberThings = confirm("Would you like to enter a number?");
+    if (doNumberThings === true) {
+        var userNumber = prompt("aight, shoot ya shot");
+    }
+    var isOdd = (userNumber % 2 !== 0);
+    var isPlussed = Number(userNumber) + 100;
+
+
+    if (isOdd === true) {
+        alert('This number is odd...');
+    }
+    else {
+        alert('This number is even...');
+
+    }
+    alert("The number plus 100 is " + isPlussed + " ...");
+
+    if (userNumber<0) {
+        alert("The number is negative");
+    }
+    else if (userNumber>0) {
+        alert("The number is positive");
+    }
+    else {
+        alert("when yer up yer up, and when yer down yer down, and when yer only half way up, yer neither up nor down")
+    }
+}
+
+numberThings();
 //  * - whether the number is even or odd
 //  * - what the number plus 100 is
 //  * - if the number is negative or positive
