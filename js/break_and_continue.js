@@ -19,7 +19,7 @@ function oddList() {
             }
         }
     }
-    playAgain = confirm("would you like to, after entering an odd number\n from 1-49... receive a list of odd numbers\nbetween 1-49 except the one you have given???\nok=Y, cancel = I'd really rather not...")
+    var playAgain = confirm("would you like to, after entering an odd number\n from 1-49... receive a list of odd numbers\nbetween 1-49 except the one you have given???\nok=Y, cancel = I'd really rather not...")
     if (playAgain === true) {
         oddList()
     }
