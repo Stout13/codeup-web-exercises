@@ -6,43 +6,30 @@ function powerHour() {
 
 powerHour()
 
-
-
-
 var allCones = Math.floor(Math.random() * 50) + 50;
 console.log(allCones + " = allCones");
 do {
-
+    // prompt logic idea courtesy of Cody Hastings
     do{
         var buyCones = prompt("How many?!");
-    } while(buyCones < 0 || buyCones > 100)
-    var buyCones = prompt("How many?!");
-    alert("sorry I only have " + allCones + "left.");
-    allCones = allCones - buyCones
-    console.log("welp, dollar saved dollar earned...  we have" + allCones + " cones")
+    } while(buyCones < 0 || buyCones > 100);
+    if(buyCones<allCones) {
+        allCones = allCones - buyCones;
+        console.log("Sold " + buyCones + " cones");
+    }
+    else if(buyCones = allCones) {
+        allCones = allCones - buyCones;
+        console.log("welp, dollar saved dollar earned...  we have" + allCones + " cones")
+        break;
+    }
+    else {
+        alert("sorry I only have " + allCones + "left.");
+    }
+
     allCones = allCones - buyCones;
     console.log("Sold " + buyCones + " cones");
 }
 while (allCones > 0) ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // function iceCream() {
 //     // This is how you get a random number between 50 and 100
