@@ -1,4 +1,4 @@
-(function nameThing(){
+(function(){
     "use strict";
 
     /**
@@ -38,7 +38,9 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(element => console.log(names[element]));
+    names.forEach(function(name) {
+        console.log(name);
+    });
 
 
 
@@ -56,16 +58,22 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-})();
+
+
 
 function first(words) {
     return words[0];
 }
+first(names);
 
 function second(words) {
     return words[1];
 }
+second(names);
 
 function last(words) {
     return words[words.length-1];
 }
+last(names);
+
+})();
