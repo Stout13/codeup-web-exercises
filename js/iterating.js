@@ -62,16 +62,19 @@
 
 
 function first(words) {
+    console.log(words[0])
     return words[0];
 }
 first(names);
 
 function second(words) {
+    console.log(words[1])
     return words[1];
 }
 second(names);
 
 function last(words) {
+    console.log(words[words.length-1])
     return words[words.length-1];
 }
 last(names);
