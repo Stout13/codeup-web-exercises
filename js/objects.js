@@ -137,15 +137,15 @@
         var index = library.length;
         // break down first and last
         author.split(', ');
-        library[index] = {
-            bookNumber: library[index],
-            type: media,
-            title: bookName,
-            author: [author[0], author[1]]
-        };
-        return (library[index]);
+        library[index] = [
+            {bookNumber: library[index]},
+            {type: media},
+            {title: bookName},
+            {author: [author[0], author[1]]}
+        ]
+        return (library[index])
     }
-
+    createBook(libraryItems);
     var newLibrary = createBook(libraryItems);
 
     var libraryItems = [
