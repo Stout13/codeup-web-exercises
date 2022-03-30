@@ -8,7 +8,7 @@
         getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
-            var area = Math.PI*circle.radius;
+            var area = Math.PI*this.radius*this.radius;
             return area;// TODO: return the proper value
         },
 
@@ -21,12 +21,13 @@
                 console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea()));
             }
             else {
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea()));
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + this.getArea());
             }
         }
     };
 
     // log info about the circle
+
     console.log("Raw circle information");
     circle.logInfo(false);
     console.log("Circle information rounded to the nearest whole number");
