@@ -9,7 +9,7 @@
             // TODO: complete this method
             // hint: area = pi * radius^2
             var area = Math.PI*circle.radius;
-            return; // TODO: return the proper value
+            return area;// TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
@@ -17,8 +17,12 @@
 
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
-
-            console.log("Area of a circle with radius: " + this.radius + ", is: ");
+            if (doRounding === true) {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea()));
+            }
+            else {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(this.getArea()));
+            }
         }
     };
 
