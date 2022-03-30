@@ -9,7 +9,7 @@
     var person = {
         firstName: "Michael",
         lastName: "Kestler",
-        sayHello: function(){
+        sayHello: function () {
             return "Hello from " + person.firstName + " " + person.lastName;
         }
     }
@@ -20,12 +20,10 @@
     console.log(person.sayHello())
 
 
-
-
     var person = {
         firstName: "Susan",
         lastName: "Saranwrap",
-        sayHello: function(){
+        sayHello: function () {
             return "Hey " + person.firstName + " Mc" + person.lastName + "pants!";
         }
     }
@@ -43,8 +41,6 @@
     //  * Add a sayHello method to the person object that returns a greeting using
     //  * the firstName and lastName properties.
     //  * console.log the returned message to check your work
-
-
 
 
     //  *
@@ -71,7 +67,7 @@
         console.log(discount);
 
         //for (var i = 0; i < shoppers.length; i++) {
-        shoppers.forEach(function(shopper) {
+        shoppers.forEach(function (shopper) {
             if (shopper.amount > 200) {
                 var discountAmt = (Math.round(100 * shopper.amount * discount) / 100);
                 console.log(discountAmt);
@@ -80,11 +76,10 @@
                 console.log("Congratulations " + shopper.customer + "! You saved $" + discountAmt + " off of $" + shopper.amount + " your total is $" + total + ".");
                 shopper.total = total;
                 shopper.gotSale = true;
-            }
-            else {
-                shopper.total = (Math.round(100*shopper.amount)/100);
+            } else {
+                shopper.total = (Math.round(100 * shopper.amount) / 100);
                 shopper.gotSale = false;
-                console.log("Thanks for shopping with us $" + shopper.customer + ". Your total is $" + shopper.total +".")
+                console.log("Thanks for shopping with us $" + shopper.customer + ". Your total is $" + shopper.total + ".")
             }
         });
     }
@@ -104,8 +99,6 @@
     //
 
 
-
-
     // * TODO:
     //  * Create an array of objects that represent books and store it in a
     //  * variable named `books`. Each object should have a title and an author
@@ -114,30 +107,73 @@
     //  * array
     //  *
 
+    //  * TODO:
+
+    //  * Loop through the books array and output the following information about
+    //  * each book:
+
     var libraryItems = [
-        {type: "book", title: "On_War", author: "Clausewitz, Carl von"},
-        {type: "book", title: "Aesthetic_Theory", author: "Adorno, Theodore W"},
-        {type: "book", title: "Solaris", author: "Lem, Stanislaw"},
-        {type: "book", title: "Indignation", author: "Roth, Philip"},
-        {type: "book", title: "Toward_A_Psychology_of_Being", author: "Maslow, Abraham"}
+        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
 
 
     ]
 
 
-    //  * Example:
-    //  * > console.log(books[0].title) // "The Salmon of Doubt"
-    //  * > console.log(books[0].author.firstName) // "Douglas"
-    //  * > console.log(books[0].author.lastName) // "Adams"
-    //
-    // /**
-    //  * TODO:
+    for (var i = 1; i <= libraryItems.length; i++) {
+        libraryItems.bookNumber = libraryItems[i];
+        console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
+    }
 
+    function createBook(library) {
 
+        var media = "book"
+        var bookName = prompt("Title_of_Book?");
+        var author = prompt("Author (Last_Name, First_Name_MI.)");
 
+        var index = library.length;
+        // break down first and last
+        author.split(', ');
+        library[index] = {
+            bookNumber: library[index],
+            type: media,
+            title: bookName,
+            author: [author[0], author[1]]
+        };
+        return (library[index]);
+    }
 
-    //  * Loop through the books array and output the following information about
-    //  * each book:
+    var newLibrary = createBook(libraryItems);
+
+    var libraryItems = [
+        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
+    ]
+
+    function showBookInfo(library) {
+        var bookNumber = prompt("please enter book number");
+        for (var i = 0; i < library.length; i++) {
+            if (library[i].bookNumber === bookNumber) {
+                return "book number: " + library[i].bookNumber + " title: " + library[i].title + " author: " + library[i].author[0] + ", " + library[i].author[1];
+            }
+        }
+    }
+    alert(showBookInfo(libraryItems));
+    //  * Bonus:
+    //  * - Create a function named `createBook` that accepts a title and author
+    //  *   name and returns a book object with the properties described
+    //  *   previously. Refactor your code that creates the books array to instead
+    //  *   use your function.
+    //  * - Create a function named `showBookInfo` that accepts a book object and
+    //  *   outputs the information described above. Refactor your loop to use your
+    //  *   `showBookInfo` function.
+
     //  * - the book number (use the index of the book in the array)
     //  * - the book title
     //  * - author's full name (first name + last name)
@@ -163,14 +199,7 @@
     //  */
     //
     // /**
-    //  * Bonus:
-    //  * - Create a function named `createBook` that accepts a title and author
-    //  *   name and returns a book object with the properties described
-    //  *   previously. Refactor your code that creates the books array to instead
-    //  *   use your function.
-    //  * - Create a function named `showBookInfo` that accepts a book object and
-    //  *   outputs the information described above. Refactor your loop to use your
-    //  *   `showBookInfo` function.
+
     //  */
 
 })();
