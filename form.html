@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<!--For this exercise, we will be building a registration page for Veridian Dynamics. We will be utilizing Request Inspector to view the resulting data that our form submits. Throughout this exercise, you should be submitting your form and viewing the resulting data on the Request Inspector page.-->
+
+<!--Create a file named forms.html.-->
+
+<!--Using what you have learned in the previous lessons, add the necessary HTML document structure to the page with a title of: "Register With Us".-->
+
+<!--Create an empty form element. We will be adding to this throughout the exercise.-->
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <textarea name="bio"></textarea>
+    <br>
+    <hr>
+    <br>
+    <h3>How did you hear about us?</h3>
+    <br>
+    <input type="checkbox" name="quiz_question_1" value="a">radio<br>
+    <input type="checkbox" name="quiz_question_1" value="b">internet search<br>
+    <input type="checkbox" name="quiz_question_1" value="c">social media<br>
+    <input type="checkbox" name="quiz_question_1" value="d">A parchment was sent to my village via automated goat caravan<br>
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <input type="submit">
+</form>
+<!--Below is an example of using the Request Inspector.-->
+
+
+<!--<form method="POST" action="https://request-inspector.glitch.me/">-->
+<!--    Create text fields for email and password with appropriate placeholder values.-->
+
+<!--    Create a textarea (<textarea name="comment"></textarea>)named "bio". This is for the user to fill out a short description of themselves.-->
+
+<!--    Create a "How did you hear about us" section that contains radio buttons. The values should be "billboard", "radio advertisement", "internet advertisement", and "other". Only one of the values should be allowed to be selected at a time.-->
+
+<!--    What happens if the inputs are given different name attributes?-->
+<!--    Change these inputs so that multiple answers are allowed to be selected.-->
+<!--    Create a dropdown that asks the user what web browser they are using.-->
+
+<!--    As you work through the steps above, you should:-->
+
+<!--    Make sure all of your form elements have labels.-->
+<!--    Make sure there's a way to submit the form, adding a submit button will solve this.-->
+<!--    Ensure that all of your form values are being submitted to the Request Inspector.-->
+<!--    Experiment with different attribute values:-->
+<!--    What do you notice when changing the form's request method from GET to POST?-->
+<!--    What happens if you leave off the name attribute on an input?-->
+<!--    What happens if you leave off the id attribute on a form input?-->
+<!--    Finally, commit the changes to your git repository, and push to GitHub.-->
+
+</body>
+</html>
