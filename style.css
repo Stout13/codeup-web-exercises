@@ -13,13 +13,13 @@ h1 {
 /*<!--    Center the main heading-->*/
 /*<!--    Add a style to change the color of the headers on your page and make them underlined.-->*/
 .myHeading {
-    text-underline: white;
-    text-color: green;
+    text-decoration: underline;
+    color: green;
 }
 /*<!--    Add a style to change the background color of the page.-->*/
 body {
     /*background-color: #8a4182;*/
-    background-image: url("/pexels-amine-m'siouri-2097442.jpg");
+    background-image: url("/codeup-web-exercises/desert.jpg");
 }
 /*<!--    Add a style to add a background image to your background. -->*/
 
