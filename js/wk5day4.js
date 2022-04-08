@@ -5,7 +5,6 @@ function frequency(input) {
     var input = input.toLowerCase().split("");
 
     dict = {};
-    var k = 0;
     for (var i = 0; i < input.length; i++) {
 
         // https://stackoverflow.com/questions/18690814/how-to-increment-an-object-property-value-if-it-exists-else-set-the-initial-val contributed by "snak" 09/09/2013
