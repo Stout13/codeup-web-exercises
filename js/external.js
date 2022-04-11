@@ -1,8 +1,9 @@
-console.log("Hello from external JavaScript");
-alert('Welcome to my website');
-console.log(`my favorite color is ${prompt('what is your favorite color')}`)
+
 
 function payTotal() {
+    console.log("Hello from external JavaScript");
+    alert('Welcome to my website');
+    console.log(`my favorite color is ${prompt('what is your favorite color')}`)
 
     var theLittleMermaid = 3;
     var brotherBear = 5;
