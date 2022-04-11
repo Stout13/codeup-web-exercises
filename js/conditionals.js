@@ -240,18 +240,24 @@ calculatedTotal(myLuckyNumber, total);
 
 function numberThings() {
     var doNumberThings = confirm("Would you like to enter a number? If so hit OK");
-    if (doNumberThings === true) {
-        continue;
-    }
-    else {
+    if (doNumberThings === false) {
         var cancel = confirm("are you sure you want to quit? if not hit CANCEL and make sure your input is a number...")
         if (cancel === true) {
-            break;
+            return;
         }
         else{
             numberThings();
         }
     }
+    // else if (doNumberThings) === false {
+    //     var cancel = confirm("are you sure you want to quit? if not hit CANCEL and make sure your input is a number...")
+    //     if (cancel === true) {
+    //         return;
+    //     }
+    //     else{
+    //         numberThings();
+    //     }
+    // }
     var userNumber = prompt("please enter a finite whole-number as a number type,\nfractions and decimals will be rounded down");
     userNumber = Math.floor(userNumber);
 
