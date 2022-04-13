@@ -1,0 +1,23 @@
+/*.display-4 {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    background-color: white;*/
+/*    z-index: 1000;*/
+/*    opacity: 70%;*/
+/*    justify-content: center;*/
+/*    align-content: center;*/
+/*}*/
+
+/*.jumbotron {*/
+/*    z-index: 0;*/
+/*}*/
+
+/*ul {*/
+/*    list-style-type: none; !* Remove bullets *!*/
+/*    padding: 0; !* Remove padding *!*/
+/*    margin: 0; !* Remove margins *!*/
+/*}*/
+
+/*.crust-group {*/
+/*    background-color: #ddd;*/
+/*}*/
