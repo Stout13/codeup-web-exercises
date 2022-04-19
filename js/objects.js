@@ -112,12 +112,12 @@
     //  * Loop through the books array and output the following information about
     //  * each book:
 
-    var libraryItems = [
-        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
-        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
-        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
-        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}]
+    // var libraryItems = [
+    //     {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+    //     {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+    //     {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+    //     {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+    //     {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}]
 
 
     // for (var i = 0; i <= libraryItems.length; i++) {
@@ -128,28 +128,35 @@
         // }
         // console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
 
-    function createBook(library) {
+    var libraryItems = [
+        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}];
+    function createBook() {
+
         // var media = (prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = (prompt("Title_of_Book?"));
         // var writer = (prompt("Author (Last_Name, First_Name_MI.)").split(', '));
+        var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
+        var bookName = prompt("Title_of_Book?");
+        var writer = prompt("Author (Last_Name, First_Name_MI.)").split(', ');
 
         // var index = library.length;
         // break down first and last
-        class newBook {
+        class book {
             constructor() {
-                var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
-                var bookName = prompt("Title_of_Book?");
-                var writer = prompt("Author (Last_Name, First_Name_MI.)").split(', ');
 
-                newBook = {
-                    type: media,
-                    title: bookName,
+                {
+                    type: media
+                    title: bookName
                     author: writer
                 }
             }
         }
-        var libraryItems = library.push(newBook);
 
+        var newBook = new book();
 
         // var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = prompt("Title_of_Book?");
@@ -165,11 +172,17 @@
         //     ,
         //         author: [author[0], author[1]]
         //     }
-
+        var libraryItems = [
+            {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+            {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+            {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+            {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+            {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}];
+        libraryItems[libraryItems.length]={newBook};
         return libraryItems;
     }
 
-    console.log(createBook(libraryItems));
+    console.log(createBook());
 
     // var newLibrary = createBook(libraryItems);
 
