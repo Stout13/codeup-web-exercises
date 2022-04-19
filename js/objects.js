@@ -148,15 +148,15 @@
         class book {
             constructor() {
 
-                {
-                    type: media
-                    title: bookName
-                    author: writer
-                }
+                 this.book= {
+                    type: media,
+                    title: bookName,
+                    author: writer,
+                };
             }
         }
 
-        var newBook = new book();
+        var literature = new book();
 
         // var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = prompt("Title_of_Book?");
@@ -177,8 +177,10 @@
             {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
             {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
             {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-            {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}];
-        libraryItems[libraryItems.length]={newBook};
+            {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
+        ];
+
+        libraryItems = libraryItems.push(literature);
         return libraryItems;
     }
 
