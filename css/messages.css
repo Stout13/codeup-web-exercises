@@ -5,3 +5,42 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+.message {
+    width: 400px;
+    margin: 15px;
+    height: 2em;
+    border-radius: .3em;
+    margin-outside: auto;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+
+/*modified the border design from  https://www.w3schools.com/css/css3_borders.asp*/
+
+.message-info {
+    background-color: #BDE8EF;
+    border: 1px solid darkblue;
+    color: darkblue;
+
+}
+
+.message-success {
+    background-color: #B9F784;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+}
+
+.message-warning {
+    background-color: #FEFFA2;
+    border: 1px solid darkgoldenrod;
+    color: darkgoldenrod;
+}
+
+.message-error {
+    background-color: #FFD4E5;
+    border: 1px solid darkred;
+    color: darkred;
+}
