@@ -22,7 +22,7 @@
 
     var person = {
         firstName: "Susan",
-        lastName: "Saranwrap",
+        lastName: "Sarandon",
         sayHello: function () {
             return "Hey " + person.firstName + " Mc" + person.lastName + "pants!";
         }
@@ -117,89 +117,109 @@
         {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
         {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
         {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
+        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}]
 
 
-    ]
-
-
-    for (var i = 1; i <= libraryItems.length; i++) {
-        libraryItems.bookNumber = libraryItems[i];
-        console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
-    }
+    // for (var i = 0; i <= libraryItems.length; i++) {
+    //     // if (!(libraryItems[i].bookNumber)) {
+    //     if (!(libraryItems[i].bookNumber)) {
+    //         Object.defineProperty(libraryItems, 'libraryItems[i].bookNumber', i)
+    //     }
+        // }
+        // console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
 
     function createBook(library) {
+        // var media = (prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
+        // var bookName = (prompt("Title_of_Book?"));
+        // var writer = (prompt("Author (Last_Name, First_Name_MI.)").split(', '));
 
-        var media = "book"
-        var bookName = prompt("Title_of_Book?");
-        var author = prompt("Author (Last_Name, First_Name_MI.)");
-
-        var index = library.length;
+        // var index = library.length;
         // break down first and last
-        author.split(', ');
-        library[index] = [
-            {bookNumber: library[index]},
-            {type: media},
-            {title: bookName},
-            {author: [author[0], author[1]]}
-        ]
-        return (library[index])
-    }
-    createBook(libraryItems);
-    var newLibrary = createBook(libraryItems);
+        class newBook {
+            constructor() {
+                var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
+                var bookName = prompt("Title_of_Book?");
+                var writer = prompt("Author (Last_Name, First_Name_MI.)").split(', ');
 
-    var libraryItems = [
-        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
-        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
-        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
-        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
-    ]
-
-    function showBookInfo(library) {
-        var bookNumber = prompt("please enter book number");
-        for (var i = 0; i < library.length; i++) {
-            if (library[i].bookNumber === bookNumber) {
-                return "book number: " + library[i].bookNumber + " title: " + library[i].title + " author: " + library[i].author[0] + ", " + library[i].author[1];
+                newBook = {
+                    type: media,
+                    title: bookName,
+                    author: writer
+                }
             }
         }
+        var libraryItems = library.push(newBook);
+
+
+        // var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
+        // var bookName = prompt("Title_of_Book?");
+        // var author = prompt("Author (Last_Name, First_Name_MI.)");
+        //
+        // var index = libraryItems.length;
+        // // break down first and last
+        // author = author.split(', ');
+        // libraryItems[index] = {
+        //         type: media
+        //     ,
+        //         title: bookName
+        //     ,
+        //         author: [author[0], author[1]]
+        //     }
+
+        return libraryItems;
     }
-    alert(showBookInfo(libraryItems));
-    //  * Bonus:
-    //  * - Create a function named `createBook` that accepts a title and author
-    //  *   name and returns a book object with the properties described
-    //  *   previously. Refactor your code that creates the books array to instead
-    //  *   use your function.
-    //  * - Create a function named `showBookInfo` that accepts a book object and
-    //  *   outputs the information described above. Refactor your loop to use your
-    //  *   `showBookInfo` function.
 
-    //  * - the book number (use the index of the book in the array)
-    //  * - the book title
-    //  * - author's full name (first name + last name)
-    //  *
+    console.log(createBook(libraryItems));
+
+    // var newLibrary = createBook(libraryItems);
+
+    // var libraryItems = [
+    //     {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+    //     {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+    //     {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+    //     {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+    //     {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}]
+
+    // function showBookInfo(library) {
+    //     var bookNumber = prompt("please enter book number");
+    //     return "book number: " + library[bookNumber] + " title: " + library[bookNumber].title + " author: " + library[bookNumber].author[0] + ", " + library[bookNumber].author[1];
+    // }
+
+    // alert(showBookInfo(libraryItems));
+        //  * Bonus:
+        //  * - Create a function named `createBook` that accepts a title and author
+        //  *   name and returns a book object with the properties described
+        //  *   previously. Refactor your code that creates the books array to instead
+        //  *   use your function.
+        //  * - Create a function named `showBookInfo` that accepts a book object and
+        //  *   outputs the information described above. Refactor your loop to use your
+        //  *   `showBookInfo` function.
+
+        //  * - the book number (use the index of the book in the array)
+        //  * - the book title
+        //  * - author's full name (first name + last name)
+        //  *
 
 
+        //  * Example Console Output:
+        //  *
+        //  *      Book # 1
+        //  *      Title: The Salmon of Doubt
+        //  *      Author: Douglas Adams
+        //  *      ---
+        //  *      Book # 2
+        //  *      Title: Walkaway
+        //  *      Author: Cory Doctorow
+        //  *      ---
+        //  *      Book # 3
+        //  *      Title: A Brief History of Time
+        //  *      Author: Stephen Hawking
+        //  *      ---
+        //  *      ...
+        //  */
+        //
+        // /**
 
-    //  * Example Console Output:
-    //  *
-    //  *      Book # 1
-    //  *      Title: The Salmon of Doubt
-    //  *      Author: Douglas Adams
-    //  *      ---
-    //  *      Book # 2
-    //  *      Title: Walkaway
-    //  *      Author: Cory Doctorow
-    //  *      ---
-    //  *      Book # 3
-    //  *      Title: A Brief History of Time
-    //  *      Author: Stephen Hawking
-    //  *      ---
-    //  *      ...
-    //  */
-    //
-    // /**
-
-    //  */
+        //  */
 
 })();
