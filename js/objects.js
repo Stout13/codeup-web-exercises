@@ -127,15 +127,15 @@
     //     }
         // }
         // console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
+    var libraryItems = [
+        {entry: {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]}},
+        {entry: {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]}},
+        {entry: {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]}},
+        {entry: {type: "book", title: "Indignation", author: ["Roth", "Philip M"]}},
+        {entry: {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}}];
 
 
-    function createBook() {
-        var libraryItems = [
-            {entry: {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]}},
-            {entry: {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]}},
-            {entry: {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]}},
-            {entry: {type: "book", title: "Indignation", author: ["Roth", "Philip M"]}},
-            {entry: {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}}];
+    function createBook(library) {
 
         // var media = (prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = (prompt("Title_of_Book?"));
@@ -146,18 +146,26 @@
 
         // var index = library.length;
         // break down first and last
-        class entry {
-            constructor() {
-
-                 this.entry= {
-                    type: media,
-                    title: bookName,
-                    author: writer,
-                };
+        // class entry {
+        //     constructor() {
+        //
+        //          this.entry= {
+        //             type: media,
+        //             title: bookName,
+        //             author: writer,
+        //         };
+        //     }
+        // }
+        var entry = {
+            entry: {
+                type: media,
+                title: bookName,
+                author: writer,
             }
-        }
+        };
+        library[library.length] = Object(entry);
 
-        var literature = new entry();
+
 
         // var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = prompt("Title_of_Book?");
@@ -180,14 +188,16 @@
         //     {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
         //     {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
         // ];
-        // literature = Object(literature);
+        // libraryItems[libraryItems.length] = new entry(entry);
 
-        libraryItems.push(literature);
-        console.log(libraryItems);
-        return libraryItems;
+        // libraryItems[libraryItems.length].entry = {};
+        // libraryItems[libraryItems.length].entry = literature;
+        console.log(library);
+        return library;
     }
-
-    console.log(createBook());
+    libraryItems = createBook(libraryItems);
+    console.log(libraryItems);
+})();
 
     // var newLibrary = createBook(libraryItems);
 
@@ -240,4 +250,4 @@
 
         //  */
 
-})();
+
