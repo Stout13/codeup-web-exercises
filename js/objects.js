@@ -128,13 +128,14 @@
         // }
         // console.log("book number: " + libraryItems[i].bookNumber + ", title: " + libraryItems[i].title + " by: " + libraryItems[i].author[0]);
 
-    var libraryItems = [
-        {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
-        {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
-        {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
-        {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-        {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}];
+
     function createBook() {
+        var libraryItems = [
+            {entry: {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]}},
+            {entry: {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]}},
+            {entry: {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]}},
+            {entry: {type: "book", title: "Indignation", author: ["Roth", "Philip M"]}},
+            {entry: {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}}];
 
         // var media = (prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = (prompt("Title_of_Book?"));
@@ -145,10 +146,10 @@
 
         // var index = library.length;
         // break down first and last
-        class book {
+        class entry {
             constructor() {
 
-                 this.book= {
+                 this.entry= {
                     type: media,
                     title: bookName,
                     author: writer,
@@ -156,7 +157,7 @@
             }
         }
 
-        var literature = new book();
+        var literature = new entry();
 
         // var media = prompt("What type of media is it?( book, movie, newspaper, periodical, article, webpage, etc.)");
         // var bookName = prompt("Title_of_Book?");
@@ -172,15 +173,17 @@
         //     ,
         //         author: [author[0], author[1]]
         //     }
-        var libraryItems = [
-            {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
-            {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
-            {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
-            {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
-            {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
-        ];
+        // var libraryItems = [
+        //     {type: "book", title: "On_War", author: ["Clausewitz", "Carl_von"]},
+        //     {type: "book", title: "Aesthetic_Theory", author: ["Adorno", "Theodore_W."]},
+        //     {type: "book", title: "Solaris", author: ["Lem", "Stanislaw"]},
+        //     {type: "book", title: "Indignation", author: ["Roth", "Philip M"]},
+        //     {type: "book", title: "Toward_A_Psychology_of_Being", author: ["Maslow", "Abraham"]}
+        // ];
+        // literature = Object(literature);
 
-        libraryItems = libraryItems.push(literature);
+        libraryItems.push(literature);
+        console.log(libraryItems);
         return libraryItems;
     }
 
