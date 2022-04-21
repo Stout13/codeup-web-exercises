@@ -5,6 +5,12 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<!--https://java.codeup.com/javascript-i/bom-and-dom/dom-events/-->
+<button id="btn1">Make Javascript Cool Again!</button>
+<button id="btn2">Click Me!</button>
+<button id="btn3">Click Me!</button>
+<button id="btn4">Click Me!</button>
+<button id="btn5">Click Me!</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -25,40 +31,45 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+
+
 <script>
-    (function() {
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+    'use strict';
+    // https://java.codeup.com/javascript-i/bom-and-dom/dom-events/
+    var listener1 = function (event) {
+        (function () {
+            "use strict";
+            // TODO: Uncomment next line and get the main header element by id
+            var mainHeader = document.getElementById('main-header');
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+            // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+            mainHeader.innerHTML = "JavaScript is Cool";
+            //
+            // // TODO: Uncomment the next line and get the sub header element by id
+            // var subHeader = document.getElementById('sub-header');
+            //
+            // // TODO: Set the text color of subHeader to blue
+            // subHeader.style.color = "blue";
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
+            // // TODO: Uncomment the next line and get all list items
+            // var listItems = document.getElementsByTagName('li');
+            // console.log(listItems);
+            // // TODO: Set text color on every other list item to grey
+            // for (let i = 0; i < listItems.length; i++) {
+            //     if (i % 2 === 0) {
+            //         listItems[i].style.color = 'grey';
+            //     }
+            // }
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
-        console.log(listItems);
-        // TODO: Set text color on every other list item to grey
-        for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 === 0) {
-                listItems[i].style.color = 'grey';
-            }
-        }
-
-        // TODO: Set text color of li with dbid = 1 to blue
+            // TODO: Set text color of li with dbid = 1 to blue
 
 
-        // for(var i = 0, i<(document.getElementsByTagName('li')).length;)
-        for (var i = 0; i<listItems.length; i++) {
-            if (listItems[i].getAttribute('data-dbid') === '1') {
-                listItems[i].style.color = 'blue';
-            }
-        }
+            // for(var i = 0, i<(document.getElementsByTagName('li')).length;)
+            // for (var i = 0; i < listItems.length; i++) {
+            //     if (listItems[i].getAttribute('data-dbid') === '1') {
+            //         listItems[i].style.color = 'blue';
+            //     }
+            // }
             // if (i === 0) {
             //     listItems[i].style.color = 'grey';
             // }
@@ -72,42 +83,240 @@
             //     }
 
 
-
-                // var dbId = document.getAttribute("data-dbid");
-                // if (dbId[i] == 1) {
-                //     listItems[i].style.color = 'blue';
-        //     }
-        //     else {
-        //         continue;
-        //     }
-        //
-        //     // }
-        //     return;
-        // }
-        // }
-
-
-        // if (li1.value === 1) {
-        //     console.log(document.getElementsByClassName("data-dbid"));
-        // }
+            // var dbId = document.getAttribute("data-dbid");
+            // if (dbId[i] == 1) {
+            //     listItems[i].style.color = 'blue';
+            //     }
+            //     else {
+            //         continue;
+            //     }
+            //
+            //     // }
+            //     return;
+            // }
+            // }
 
 
+            // if (li1.value === 1) {
+            //     console.log(document.getElementsByClassName("data-dbid"));
+            // }
 
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+            // var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            //
+            //
+            // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            // for (let i = 0; i < subParagraphs.length; i++) {
+            //     if (i === 0) {
+            //         subParagraphs[i].innerHTML = 'Mission Accomplished!'
+            //     }
+            // }
+        })();
+
+    }
+    var btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', listener1);
+
+    var listener2 = function (event) {
+        (function () {
+            // TODO: Uncomment the next line and get the sub header element by id
+            var subHeader = document.getElementById('sub-header');
+
+            // TODO: Set the text color of subHeader to blue
+            subHeader.style.color = "blue";
 
 
+        })();
+    }
+    var btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', listener2);
 
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        for (let i = 0; i < subParagraphs.length; i++) {
-            if (i === 0) {
-                subParagraphs[i].innerHTML = 'Mission Accomplished!'
+    var listener3 = function (event) {
+        (function () {
+            // TODO: Uncomment the next line and get all list items
+            var listItems = document.getElementsByTagName('li');
+            console.log(listItems);
+            // TODO: Set text color on every other list item to grey
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = 'grey';
+                }
             }
-        }
+        })();
+    }
+    var btn3 = document.getElementById('btn3');
+    btn3.addEventListener('click', listener3);
 
-    })();
+    var listener4 = function (event) {
+        (function () {
+            // TODO: Uncomment the next line and get all list items
+            var listItems = document.getElementsByTagName('li');
+            console.log(listItems);
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute('data-dbid') === '1') {
+                    listItems[i].style.color = 'blue';
+                }
+            }
+
+        })();
+
+    }
+    var btn4 = document.getElementById('btn4');
+    btn4.addEventListener('click', listener4);
+
+
+    var listener5 = function (event) {
+        (function () {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+
+
+            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+            for (let i = 0; i < subParagraphs.length; i++) {
+                if (i === 0) {
+                    subParagraphs[i].innerHTML = 'Mission Accomplished!'
+                }
+            }
+
+
+        })();
+    }
+
+    var btn5 = document.getElementById('btn5');
+    btn5.addEventListener('click', listener5);
+
+    // var listener5 = function (event) {
+    //     (function () {
+    //         var subParagraphs = document.getElementsByClassName('sub-paragraph');
+    //
+    //
+    //         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    //         for (let i = 0; i < subParagraphs.length; i++) {
+    //             if (i === 0) {
+    //                 subParagraphs[i].innerHTML = 'Mission Accomplished!'
+    //             }
+    //         }
+    //
+    //
+    //     })();
+    // }
+                        // https://java.codeup.com/javascript-i/bom-and-dom/dom-events/
+    // add event listener to btn1
+
+
+    // document.getElementById("myBtn").addEventListener("click", displayDate);
+    //
+    // var btn2 = document.getElementById('btn2');
+    // btn1.addEventListener('click', listener2);
+    //
+    // var btn3 = document.getElementById('btn3');
+    // btn1.addEventListener('click', listener3);
+    //
+    // var btn4 = document.getElementById('btn4');
+    // btn1.addEventListener('click', listener4);
+    //
+    // var btn5 = document.getElementById('btn5');
+    // btn1.addEventListener('click', listener5);
+
+
+
+
+    // var remover = function (event) {
+    //     // remove event listener from btn1
+    //     btn1.removeEventListener('click', listener);
+    //     console.log('Event listener removed.');
+    // }
+
+    // add event listener to btn2
+    // var btn2 = document.getElementById('btn2');
+    // btn2.addEventListener('click', remover);
+
+
+
+
+    //     (function() {
+    //     "use strict";
+    //     // TODO: Uncomment next line and get the main header element by id
+    //     var mainHeader = document.getElementById('main-header');
+    //
+    //     // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+    //     mainHeader.innerHTML = "JavaScript is Cool";
+    //
+    //     // TODO: Uncomment the next line and get the sub header element by id
+    //     var subHeader = document.getElementById('sub-header');
+    //
+    //     // TODO: Set the text color of subHeader to blue
+    //     subHeader.style.color = "blue";
+    //
+    //     // TODO: Uncomment the next line and get all list items
+    //     var listItems = document.getElementsByTagName('li');
+    //     console.log(listItems);
+    //     // TODO: Set text color on every other list item to grey
+    //     for (let i = 0; i < listItems.length; i++) {
+    //         if (i % 2 === 0) {
+    //             listItems[i].style.color = 'grey';
+    //         }
+    //     }
+    //
+    //     // TODO: Set text color of li with dbid = 1 to blue
+    //
+    //
+    //     // for(var i = 0, i<(document.getElementsByTagName('li')).length;)
+    //     for (var i = 0; i<listItems.length; i++) {
+    //         if (listItems[i].getAttribute('data-dbid') === '1') {
+    //             listItems[i].style.color = 'blue';
+    //         }
+    //     }
+    //         // if (i === 0) {
+    //         //     listItems[i].style.color = 'grey';
+    //         // }
+    //         // else
+    //         // var li1 = document.querySelector(data-dbid = '1');
+    //         // for (var k = 0; k < li1.length; k++) {
+    //         //     console.log(li1);
+    //         //     // var dbId = li1[i].getAttribute("data-dbid");
+    //         //     if (li1 == 'Item 1') {
+    //         //         listItems[i].style.color = 'blue';
+    //         //     }
+    //
+    //
+    //
+    //             // var dbId = document.getAttribute("data-dbid");
+    //             // if (dbId[i] == 1) {
+    //             //     listItems[i].style.color = 'blue';
+    //     //     }
+    //     //     else {
+    //     //         continue;
+    //     //     }
+    //     //
+    //     //     // }
+    //     //     return;
+    //     // }
+    //     // }
+    //
+    //
+    //     // if (li1.value === 1) {
+    //     //     console.log(document.getElementsByClassName("data-dbid"));
+    //     // }
+    //
+    //
+    //
+    //
+    //     // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+    //     var subParagraphs = document.getElementsByClassName('sub-paragraph');
+    //
+    //
+    //
+    //
+    //     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    //     for (let i = 0; i < subParagraphs.length; i++) {
+    //         if (i === 0) {
+    //             subParagraphs[i].innerHTML = 'Mission Accomplished!'
+    //         }
+    //     }
+    //
+    // })();
 </script>
 </body>
 </html>
