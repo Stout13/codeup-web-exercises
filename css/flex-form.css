@@ -41,6 +41,7 @@ body {
     margin-border: 10px;
 
 
+
     /* TODO: Add an automatic margin and a flex container to this selector */
 }
 
@@ -55,7 +56,21 @@ body {
     -webkit-appearance: none;
 
 }
+/*input {*/
+/*    border: solid 3px black;*/
+/*    border-radius: 1px;*/
+/*}*/
 
+/*label {*/
+/*    border: solid 3px black;*/
+/*    border-radius: 1px;*/
+/*}*/
+
+form>* {
+    border: black solid 3px;
+    border-radius: 1px;
+
+}
 
 .btn-primary {
     background: #b4d455;
@@ -72,5 +87,5 @@ body {
 }
 
 body {
-    background-image: url(/welcomeImgs/beachdusk.jpg);
+    background-image: url(/welcomeImgs/puppiness.mp4);
 }

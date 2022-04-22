@@ -1,5 +1,10 @@
 * {box-sizing: border-box;}
 
+/*article {*/
+/*    position: fixed;*/
+/*    top: 20px;*/
+/*}*/
+
 body {
     margin: 0;
     padding: 0;
@@ -7,24 +12,14 @@ body {
     font-family: Chalkboard, sans-serif;
 }
 
-header.container {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-
-    text-align: center;}
+h1 {text-align: center;}
 
 h2, h3 {
     padding: 0;
     margin: 0;
 }
-head>title {
-    justify-content: center;
-}
-.container {
 
+.container {
     margin: 0 auto;
     width: 80%;
 }
@@ -44,76 +39,66 @@ head>title {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
-}
-.card>section {
     display: flex;
-    align-self: flex-end;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+}
+
+*.card>section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* enter needed declarations here */
+    display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
-.card.section.orange-circle {
-    justify-content: flex-end;
 }
 
-section {
-    margin-block: 20px;
-
-    /* enter needed declarations here */
-}
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
-    display: flex;
-
     /* enter needed declarations here */
 }
-section:nth-of-type(1) div:last-child {
-    /* enter needed declarations here */
-    align-self: start;
 
+section:nth-of-type(1) div:last-child {
+    align-self: flex-start;
+    /* enter needed declarations here */
 }
 
 .purple-box {
-    display: flex;
     background: fuchsia;
     width: 3em;
     height: 1em;
-    flex-grow: 3;
 }
 
 .purple-box:nth-of-type(1) {
     /* enter needed declarations here */
+    flex-grow: 2;
 }
 
 .purple-box:nth-of-type(2) {
+    flex-grow: 1;
     /* enter needed declarations here */
 }
+
 
 .blue-box {
     width: 100%;
     background: blue;
     height: 10em;
 }
-.blue-box>section{
-    display: flex;
-
-}
-
 
 section:nth-of-type(3) {
     /* enter needed declarations here */
+    align-items: center;
 }
 
 section:nth-of-type(3) h3 {
     /* enter needed declarations here */
-
+    flex-grow: 1;
 }
 
 .orange-circle {
-    float: right;
     background: orange;
     width: 2em;
     height: 2em;
@@ -126,6 +111,7 @@ section:nth-of-type(3) h3 {
     width: 5em;
     background: brown;
     /* enter needed declarations here */
+    flex-grow: 1;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -134,6 +120,7 @@ section:nth-of-type(3) h3 {
 
 section:nth-of-type(5) {
     /* enter needed declarations here */
+    justify-content: space-evenly;
 }
 
 .yellow-box {
@@ -146,6 +133,8 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .grey-box {
