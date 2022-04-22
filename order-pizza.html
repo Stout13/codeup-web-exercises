@@ -111,411 +111,186 @@
 <!--    </li>-->
 <!--<ul class="nav nav-tabs">-->
 <!--    <li><a data-toggle="tab" href="#menu2">Choices</a>-->
-    <div class="jumbotron .d-sm-none .d-md-block" style="background-image: url(/welcomeImgs/pizza.png)">
-        <h1 class="display-4">Welcome to Pizza World!</h1>
-        <!--        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>-->
-        <!--        <hr class="my-4">-->
-        <!--        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
-        <!--        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
-    </div>
+<div class="jumbotron .d-sm-none .d-md-block" style="background-image: url(/welcomeImgs/pizza.png)">
+    <h1 class="display-4">Welcome to Pizza World!</h1>
+    <!--        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>-->
+    <!--        <hr class="my-4">-->
+    <!--        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+    <!--        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
 </div>
-<nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Size and Crust</a>
-        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-        <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
-    </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-    <p>
-    <div class="tab-pane fade active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Size And Crust</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="card">
+        <div class="card-header">
+            Size
+        </div>
+<!--        <div class="card-body">-->
+<!--            <h5 class="card-title">Special title treatment</h5>-->
+<!--            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--            <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--        </div>-->
+
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><div class="card-body">
         <div class="card">
-            <h5 class="card-header">Choose Size and Crust</h5>
-            <div class="card-body">
-                <div class="card">
-                    <div class="card-body-header">
-                        Hand-Tossed
+            <div class="card-body-header">
+                Hand-Tossed
+            </div>
+            <div class="card-body-header">
+                <!--                                <h5 class="card-title">Special title treatment</h5>-->
+                Rich garlic-ey buttery goodness!
+                <!--                                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <!--                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>-->
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="HTsmall" value="option1" checked>
+                            <label class="form-check-label" for="HTsmall">
+                                small (10")
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="HTmedium" value="option2">
+                            <label class="form-check-label" for="HTmedium">
+                                medium (12")
+                            </label>
+                        </div>
+                        <!--                                        <div class="form-check disabled">-->
+                        <!--                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>-->
+                        <!--                                            <label class="form-check-label" for="gridRadios3">-->
+                        <!--                                                Third disabled radio-->
+                        <!--                                            </label>-->
                     </div>
-                    <div class="card-body-header">
-<!--                                <h5 class="card-title">Special title treatment</h5>-->
-                        Rich garlic-ey buttery goodness!
-<!--                                <a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                        <fieldset class="form-group">
-                            <div class="row">
-<!--                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>-->
-                                <div class="col-sm-10">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="HTsmall" value="option1" checked>
-                                        <label class="form-check-label" for="HTsmall">
-                                            small (10")
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="HTmedium" value="option2">
-                                        <label class="form-check-label" for="HTmedium">
-                                            medium (12")
-                                        </label>
-                                    </div>
-<!--                                        <div class="form-check disabled">-->
-<!--                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>-->
-<!--                                            <label class="form-check-label" for="gridRadios3">-->
-<!--                                                Third disabled radio-->
-<!--                                            </label>-->
-                                    </div>
-                                </div>
+                </div>
 
-                        </fieldset>
-                    <span></span>
-                    <div class="card-body-header">
-                        <!--                                <h5 class="card-title">Special title treatment</h5>-->
-                        With supporting text below as a natural lead-in to additional content.
-                        <!--                                <a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <!--                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>-->
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="CTmedium" value="option1" checked>
-                                    <label class="form-check-label" for="CTmedium">
-                                        medium (12")
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="CTlarge" value="option2">
-                                    <label class="form-check-label" for="CTlarge">
-                                        large (12")
-                                    </label>
-                                </div>
-<!--                                    <div class="form-check disabled">-->
-<!--                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>-->
-<!--                                        <label class="form-check-label" for="gridRadios3">-->
-<!--                                            Third disabled radio-->
-<!--                                        </label>-->
-<!--                                    </div>-->
-                            </div>
+            </fieldset>
+        </div>
+        <span></span>
+            <div class="card-body-header">
+                <!--                                <h5 class="card-title">Special title treatment</h5>-->
+                With supporting text below as a natural lead-in to additional content.
+                <!--                                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <!--                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>-->
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="CTmedium" value="option1" checked>
+                            <label class="form-check-label" for="CTmedium">
+                                medium (12")
+                            </label>
                         </div>
-                    </fieldset>
-                    </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="CTlarge" value="option2">
+                            <label class="form-check-label" for="CTlarge">
+                                large (12")
+                            </label>
+                        </div>
+                        <!--                                    <div class="form-check disabled">-->
+                        <!--                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>-->
+                        <!--                                        <label class="form-check-label" for="gridRadios3">-->
+                        <!--                                            Third disabled radio-->
+                        <!--                                        </label>-->
+                        <!--                                    </div>-->
                     </div>
                 </div>
-            </div>
+            </fieldset>
         </div>
-    </p>
-    <p>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <div class="card">
-                <h5 class="card-header">Profile</h5>
-                <div class="card-body">
-                    <div class="card">
-                        <div class="card-body-header">
-                            Featured
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-<!--                                <fieldset class="form-group">-->
-<!--                                    <div class="row">-->
-<!--&lt;!&ndash;                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>&ndash;&gt;-->
-<!--                                        <div class="col-sm-10">-->
-<!--                                            <div class="form-check">-->
-<!--                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>-->
-<!--                                                <label class="form-check-label" for="gridRadios1">-->
-<!--                                                    First radio-->
-<!--                                                </label>-->
-<!--                                            </div>-->
-<!--                                            <div class="form-check">-->
-<!--                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">-->
-<!--                                                <label class="form-check-label" for="gridRadios2">-->
-<!--                                                    Second radio-->
-<!--                                                </label>-->
-<!--                                            </div>-->
-<!--                                            <div class="form-check disabled">-->
-<!--                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>-->
-<!--                                                <label class="form-check-label" for="gridRadios3">-->
-<!--                                                    Third disabled radio-->
-<!--                                                </label>-->
-<!--                                            </div>-->
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </p>
-    <p>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <div class="card">
-                <h5 class="card-header">Contact</h5>
-                <div class="card-body">
-                    <div class="card">
-                        <div class="card-body-header">
-                            Featured
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            <fieldset class="form-group">
-                                <div class="row">
-<!--                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>-->
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                                First radio
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Second radio
-                                            </label>
-                                        </div>
-                                        <div class="form-check disabled">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                                            <label class="form-check-label" for="gridRadios3">
-                                                Third disabled radio
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </p>
     </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
-<!--        <hr>-->
-
-<!--        <nav>-->
-<!--            <div class="nav nav-tabs" id="nav-tab" role="tablist">-->
-<!--                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-crust" role="tab" aria-controls="nav-home" aria-selected="true">Crust</a><hr>-->
-<!--                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-cheese" role="tab" aria-controls="nav-profile" aria-selected="false">Cheese</a><hr>-->
-<!--                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-size" role="tab" aria-controls="nav-contact" aria-selected="false">Size</a><hr>-->
-<!--            </div>-->
-<!--        </nav>-->
-<!--        <div class="tab-content" id="nav-tabContent">-->
-<!--            <div class="tab-pane fade show active" id="nav-crust" role="tabpanel" aria-labelledby="nav-home-tab">-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="thin" value="option1" checked>-->
-<!--                    <label class="form-check-label" for="thin">-->
-<!--                        Thin-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="thick" value="option2">-->
-<!--                    <label class="form-check-label" for="thick">-->
-<!--                        Thick-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="burned" value="option3">-->
-<!--                    <label class="form-check-label" for="burned">-->
-<!--                        Burned-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--            <div class="tab-pane fade show active" id="nav-cheese" role="tabpanel" aria-labelledby="nav-home-tab">-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="mozzarella" value="option1" checked>-->
-<!--                    <label class="form-check-label" for="mozzarella">-->
-<!--                        Mozzarella-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="asiago" value="option2">-->
-<!--                    <label class="form-check-label" for="asiago">-->
-<!--                        Asiago-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="velveeta" value="option3">-->
-<!--                    <label class="form-check-label" for="velveeta">-->
-<!--                        Velveeta-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--            <div class="tab-pane fade show active" id="nav-size" role="tabpanel" aria-labelledby="nav-home-tab">-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="small" value="option1" checked>-->
-<!--                    <label class="form-check-label" for="small">-->
-<!--                        Small-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="Large" value="option2">-->
-<!--                    <label class="form-check-label" for="large">-->
-<!--                        Large-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="gluttonous" value="option3">-->
-<!--                    <label class="form-check-label" for="gluttonous">-->
-<!--                        Gluttonous-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </li>-->
-<!--</ul>-->
-
-<!--<div class="tab-content">-->
-<!--    <div id="home" class="tab-pane fade in active">-->
-<!--        <h3>HOME</h3>-->
-<!--        <p>Some content.</p>-->
-<!--    </div>-->
-<!--    <div id="menu1" class="tab-pane fade">-->
-<!--        <h3>Menu 1</h3>-->
-<!--        <p>Some content in menu 1.</p>-->
-<!--    </div>-->
-<!--    <div id="menu2" class="tab-pane fade">-->
-<!--        <h3>Menu 2</h3>-->
-<!--        <p>Some content in menu 2.</p>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<div class="container">-->
-<!--<nav class="navbar" id = "main">-->
-<!--    <a>Pizza world</a>-->
-<!--    <a>Order online</a>-->
-<!--    <a>Menu</a>-->
-<!--    <a>-->
-<!--        <form class="navigation" action=""></form>-->
-
-<!--    &lt;!&ndash;        https://www.wufoo.com/html5/placeholder-attribute/    great example of zip field place holder mixed with-->
-<!--                a button from-->
-<!--                css-tricks below in a form&ndash;&gt;-->
-
-<!--            <input id="zip" name="zip" type="text" pattern="[0-9]*" placeholder="Zip Code 12345">-->
-
-<!--    &lt;!&ndash;        https://css-tricks.com/html-for-zip-codes/    great example of zip field mixed with a button from-->
-<!--                css-tricks below in a form&ndash;&gt;-->
-
-<!--            <button type="submit"><i class="fa fa-search">SEARCH</i></button>-->
-<!--        </form>-->
-<!--    </a>-->
-
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--        <a class="navbar-brand" href="#">Navbar</a>-->
-<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-
-<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--            <ul class="navbar-nav mr-auto">-->
-<!--                <li class="nav-item active">-->
-<!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Link</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item dropdown">-->
-<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                        Dropdown-->
-<!--                    </a>-->
-<!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                        <a class="dropdown-item" href="#">Action</a>-->
-<!--                        <a class="dropdown-item" href="#">Another action</a>-->
-<!--                        <div class="dropdown-divider"></div>-->
-<!--                        <a class="dropdown-item" href="#">Something else here</a>-->
-<!--                    </div>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--            <form class="form-inline my-2 my-lg-0">-->
-<!--                <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">-->
-<!--                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </nav>-->
-<!--</div>-->
-<!--<div class="container">-->
-<!--    <div class="jumbotron .d-sm-none .d-md-block" style="background-image: url(/welcomeImgs/pizza.png)">-->
-<!--        <h1 class="display-4">Welcome to Pizza World!</h1>-->
-<!--&lt;!&ndash;        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>&ndash;&gt;-->
-<!--&lt;!&ndash;        <hr class="my-4">&ndash;&gt;-->
-<!--&lt;!&ndash;        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>&ndash;&gt;-->
-<!--&lt;!&ndash;        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>&ndash;&gt;-->
-<!--    </div>-->
-<!--    <div class="card">-->
-<!--        <div class="card-header">-->
-<!--            <ul class="nav nav-tabs">-->
-<!--                <li class="nav-crust">-->
-<!--                    <a class="nav-link active" href="#">Crust</a>-->
-<!--                    <p>types of crust and things</p>-->
-<!--&lt;!&ndash;                    <hr>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <form class="crust-content" data-toggle="tab">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <div class="card" style="width: 90%;">&ndash;&gt;-->
-<!--&lt;!&ndash;                            &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="crust-selection">&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash;                    <h5 class="card-title">Card title</h5>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <p class="card-text">select your crust</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash;                    <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <ul class="crust-group" data-toggle="tab">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="stuff1" name="fav_language" value="HTML">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="html">thin</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="stuff2" name="fav_language" value="CSS">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="css">thick</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="stuff3" name="fav_language" value="JavaScript">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="javascript">burned</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                </ul>&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </form>&ndash;&gt;-->
-
-
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Size</a>-->
-<!--                    <p>smallMedLarge</p>-->
-<!--&lt;!&ndash;                    <form class="crust-content" data-toggle="tab">&ndash;&gt;-->
-<!--&lt;!&ndash;                        <div class="card" style="width: 90%;">&ndash;&gt;-->
-<!--&lt;!&ndash;                            &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                            <div class="crust-selection">&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash;                    <h5 class="card-title">Card title</h5>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <p class="card-text">select your crust</p>&ndash;&gt;-->
-<!--&lt;!&ndash;                                &lt;!&ndash;                    <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                                <ul class="crust-group" data-toggle="tab">&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="html" name="fav_language" value="HTML">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="html">small</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="css" name="fav_language" value="CSS">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="css">large</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <li><input type="radio" id="javascript" name="fav_language" value="JavaScript">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <label for="javascript">gluttonous</label></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                                </ul>&ndash;&gt;-->
-<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </form>&ndash;&gt;-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">Cheese</a>-->
-<!--                    <p>Mozzarella, Asagio</p>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-
-
-<!--        </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; Content here &ndash;&gt;-->
-<!--</div>-->
 <!-- Main page content -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
 </body>
 </html>
+
+
+
+
+<!--<h5 class="card-header">Choose Size and Crust</h5>-->
+<!--<div class="card-body">-->
+<!--    <div class="card">-->
+<!--        <div class="card-body-header">-->
+<!--            Hand-Tossed-->
+<!--        </div>-->
+<!--        <div class="card-body-header">-->
+<!--            &lt;!&ndash;                                <h5 class="card-title">Special title treatment</h5>&ndash;&gt;-->
+<!--            Rich garlic-ey buttery goodness!-->
+<!--            &lt;!&ndash;                                <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <fieldset class="form-group">-->
+<!--            <div class="row">-->
+<!--                &lt;!&ndash;                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>&ndash;&gt;-->
+<!--                <div class="col-sm-10">-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="gridRadios" id="HTsmall" value="option1" checked>-->
+<!--                        <label class="form-check-label" for="HTsmall">-->
+<!--                            small (10")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="gridRadios" id="HTmedium" value="option2">-->
+<!--                        <label class="form-check-label" for="HTmedium">-->
+<!--                            medium (12")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;                                        <div class="form-check disabled">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            <label class="form-check-label" for="gridRadios3">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                Third disabled radio&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            </label>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </fieldset>-->
+<!--        <span></span>-->
+<!--        <div class="card-body-header">-->
+<!--            &lt;!&ndash;                                <h5 class="card-title">Special title treatment</h5>&ndash;&gt;-->
+<!--            With supporting text below as a natural lead-in to additional content.-->
+<!--            &lt;!&ndash;                                <a href="#" class="btn btn-primary">Go somewhere</a>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <fieldset class="form-group">-->
+<!--            <div class="row">-->
+<!--                &lt;!&ndash;                                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>&ndash;&gt;-->
+<!--                <div class="col-sm-10">-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="gridRadios" id="CTmedium" value="option1" checked>-->
+<!--                        <label class="form-check-label" for="CTmedium">-->
+<!--                            medium (12")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="gridRadios" id="CTlarge" value="option2">-->
+<!--                        <label class="form-check-label" for="CTlarge">-->
+<!--                            large (12")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;                                    <div class="form-check disabled">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                        <label class="form-check-label" for="gridRadios3">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            Third disabled radio&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                        </label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </fieldset>-->
+<!--    </div>-->
+<!--</div>-->
