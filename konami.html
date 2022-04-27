@@ -1,10 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta class="konami-entered"/>
+    <title>Document</title>
 </head>
 <body>
+<h1>Konami Code</h1>
+<p>Do you remember Konami?</p>
 
+<p class="code">"↑ ↑ ↓ ↓ ← → ← → b a enter"</p>
+<span></span>
+
+<input id="key-field" oninput="keyHandler(this) " type="text" placeholder="Enter Konami Code!">
+
+<script src="Software-Packages/jquery.js"></script>
+<script>
+    "use strict";
+    var keystrokes = [];
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    $(document).keyup(function(event) {
+        keystrokes.push(event.keyCode);
+    if (keystrokes.toString() === konamiCode.toString()) {
+        alert('You did it!');
+        var delay = 5000; // delay time in milliseconds
+        setTimeout(function () {
+            window.location.href = "https://jsnes.org/run/owlia";
+        }, delay);
+    }
+    // console.log(event.keyCode);
+});
+</script>
 </body>
 </html>
