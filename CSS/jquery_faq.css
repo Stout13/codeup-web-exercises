@@ -1,3 +1,18 @@
 .invisible {
     visibility: hidden;
 }
+
+/*li {*/
+/*    background-color: white;*/
+/*    color: black;*/
+/*}*/
+
+.highlighted>* {
+    background-color: yellow;
+    color: black;
+}
+
+/*.blue>* {*/
+/*    color: blue;*/
+/*}*/
+

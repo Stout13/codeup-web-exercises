@@ -52,12 +52,112 @@
 <hr>
 <span></span>
     <button class="hide-show">hide-show</button>
+<span></span>
+<hr>
+<h3 onclick="bold(this)">
+    Acadia
+</h3>
+<ul>
+
+    <li onclick="blueUlFirst(this)">
+        one
+    </li>
+    <li onclick="blueUlFirst(this)">
+        two
+    </li>
+    <li onclick="blueUlFirst(this)">
+        three
+    </li>
+
+
+</ul>
+<h3 onclick="bold(this)">
+    Glacier
+</h3>
+<ul>
+
+    <li onclick="blueUlFirst(this)">
+        one
+    </li>
+    <li onclick="blueUlFirst(this)">
+        two
+    </li>
+    <li onclick="blueUlFirst(this)">
+        three
+    </li>
+
+
+</ul>
+<h3 onclick="bold(this)">
+    Nez Perce National Historical Park
+</h3>
+<ul>
+
+    <li onclick="blueUlFirst(this)">
+one
+    </li>
+    <li onclick="blueUlFirst(this)">
+two
+    </li>
+    <li onclick="blueUlFirst(this)">
+three
+    </li>
+
+
+</ul>
+<hr>
+
+<span></span>
+<button class="highlight-last-LI">Important Facts</button>
+<span></span>
+
 <script src="/Software-Packages/jquery.js"></script>
 <script>
 // $('dd').css('visibility', 'hidden');
 $('.hide-show').click(function () {
     $('dd').toggle('.invisible');
 });
+
+
+
+// $('ul'.children()).last().addClass('.highlighted')
+var toggleHighlight = 0
+$('.highlight-last-LI').click(function () {
+    if (toggleHighlight === 0) {
+        $('li:last-child').css('background-color', 'yellow');
+        toggleHighlight = toggleHighlight += 1;
+    }
+    else {
+        $('li:last-child').css('background-color', 'white');
+        toggleHighlight = toggleHighlight -=1;
+    }
+});
+
+
+    // $('h3'.next()).children('li').css('background-color', 'red');
+function bold(e) {
+    $(e).next().children().css('font-weight', 'bold');
+}
+
+// function blueUlFirst(e) {
+//     var parent = $(e).parent()
+//     parent.next().css('color', 'green');
+//
+// }
+
+function blueUlFirst(e) {
+    // $(e).parent().firstChild().css('font-weight', 'bold');
+    $(e).parent('ul').children('li:first-child').css('color', 'blue');
+    //     while (ind[0]) {
+    //         $(this).css('color', 'red');
+    //     }
+    //     // .css('color', 'red');
+    // })
+    // $('.blue').css('color', 'red');
+        // .css('color', 'red');
+}
+
+        // $(this.children('li')).css('font-weight', 'bold');
 </script>
 </body>
 </html>
