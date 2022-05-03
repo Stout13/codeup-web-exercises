@@ -18,20 +18,79 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
 <script>
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
+    console.log($.ajax("../data/inventory.json"));
+    // TODO: Take the data from inventory.json and append it to the products tables
+    // var tbody = document.querySelector('#insertProducts');
+    var ajaxResponse = $.ajax("../data/inventory.json");
+    ajaxResponse.done(function (data) {
+        console.log(data);
+        $('#insertProducts').html(renderTools(data));
+    });
 
-    // TODO: Take the data from inventory.json and append it to the products table
+    function createTool(data) {
+        // console.log(dataArrayList)
+        // assigns data to dataArrayList variable
+        var tool = '<tr class="tool">';
+        tool += '<td>' + data.title + '</td>';
+        tool += '<td>' + data.quantity + '</td>';
+        tool += '<td>' + data.price + '</td>';
+        tool += '<td>' + data.categories + '</td>';
+        tool += '</tr>';
+        return tool;
+    }
+    //     creates and assigns an entire html table to variable tbody
+    //    returns the tbody variable to be called on reload by browser
+    //
+
+
+    // console.log(data);
+
+
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
-</script>
+    // function renderCoffee(coffee) {
+    //     var html = '<tr class="coffee">';
+    //
+    //     html += '<td>' + coffee.id + '</td>';
+    //     html += '<td>' + coffee.name + '</td>';
+    //     html += '<td>' + coffee.roast + '</td>';
+    //     html += '</tr>';
+    //
+    //     return html;
+    // }
+    function renderTools(dataArrayList) {
+        var html = '';
+        for(var i = dataArrayList.length - 1; i >= 0; i--) {
+            html += createTool(dataArrayList[i]);
+        }
+        return html;
+    }
+    // function updateCoffees(e) {
+    //     e.preventDefault(); // don't submit the form, we just want to update the data
+    //     var selectedRoast = roastSelection.value;
+    //     var filteredCoffees = [];
+    //     coffees.forEach(function(coffee) {
+    //         if (coffee.roast === selectedRoast) {
+    //             filteredCoffees.push(coffee);
+    //         }
+    //     });
+    //     tbody.innerHTML = renderCoffees(filteredCoffees);
+    // }
+    // var tbody = document.querySelector('#coffees');
+    // var roastSelection = document.querySelector('#roast-selection');
+    // tbody.innerHTML = renderCoffees(coffees);
+    // /
 
+// $('#insertProducts').innerHTML = renderTools(coffees);
+      })();
+</script>
 </body>
 </html>
+
