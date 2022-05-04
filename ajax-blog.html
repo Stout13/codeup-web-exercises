@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/ajax-blog.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+</body>
+</html>
+
+<div class="#posts">
+</div>
+<h2>Blog Name</h2>
+
+<div class="row">
+   <div id="posts">
+
+   </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+            <h3>Popular Post</h3>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div><br>
+            <div class="fakeimg">Image</div>
+        </div>
+        <div class="card">
+            <h3>Follow Me</h3>
+            <p>Some text..</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Footer</h2>
+</div>
+<script>
+    var ajaxResponse = $.ajax("data/blog.json");
+    ajaxResponse.done(function (data) {
+        console.log(data);
+        $('#posts').html(createBlog(data));
+    });
+
+        // $('#posts').html() = $.ajax('/data/blog.json').done(function())
+    function createBlogEntry(loopItem) {
+
+//        var tool = '<tr class="tool">';
+    // tool += '<td>' + data.title + '</td>';
+    // tool += '<td>' + data.quantity + '</td>';
+    // tool += '<td>' + data.price + '</td>';
+    // tool += '<td>' + data.categories + '</td>';
+    // tool += '</tr>';
+    // return tool;
+        var title = loopItem.title;
+        console.log(title);
+
+        var date = loopItem.date;
+        console.log(date);
+
+        var content = loopItem.content;
+        console.log(loopItem.content);
+
+        var categories = loopItem.categories;
+        console.log(loopItem.categories);
+
+        var blogEntry = '<div className="blog-entry">';
+        blogEntry += '<div className="card">';
+        blogEntry += '<h2>' + title + '</h2>';
+        blogEntry += '<h5>' + date + '</h5>';
+        // blogEntry += '<div className="fakeimg" style="height:200px;">Image</div>';
+        blogEntry += '<p>' + content + '</p>';
+        blogEntry += '</div>';
+        blogEntry += '</div>';
+
+        return blogEntry;
+    }
+
+    function createBlog(dataArrayList) {
+        var html = '';
+        for (var i = dataArrayList.length - 1; i >= 0; i--) {
+            html += createBlogEntry(dataArrayList[i]);
+        }
+        return html;
+    }
+</script>
