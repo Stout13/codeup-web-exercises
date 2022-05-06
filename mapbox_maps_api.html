@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="JS/mapbox_geocoder_utils.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Mapbox style sheet follows-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+<!--    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>-->
+<!--<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />-->
+
+    <title>Document</title>
+</head>
+<body>
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>'
+<script src="https://github.com/mapbox/mapbox-gl-js/blob/5db490a263f7d2404ae097cb7f0060578895286b/src/ui/marker.js#L62-L759";></script>
+<script src = "https://github.com/mapbox/mapbox-gl-geocoder"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="../JS/mapbox_geocoder_utils.js"></script>
+
+<script>
+
+
+    var token = 'pk.eyJ1Ijoic3RhY2tjaXBoZXIiLCJhIjoiY2wycWxlbWkwMndldjNqc2J6MjhyZWpzaiJ9.Wlrrv9yH4lV6xnOG0jLWig';
+
+    var accessToken = token.valueOf();
+
+    mapboxgl.accessToken = accessToken;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+
+    // Create a new marker.
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat([30.5, 50.5])
+    //     .addTo(map);
+
+    var alamoInfo = {
+        address: "The Alamo, San Antonio",
+        popupHTML: "<p>Remember the Alamo!</p>"
+    };
+
+    var theFishMarketInfo = {
+        address: "The Fish Market, San Diego",
+        popupHTML: "<p>Oysters, or maybe just salmon.</p>"
+    };
+
+    var theFlyingSaucerInfo = {
+        address: "The Flying Saucer, Dallas",
+        popupHTML: "<p>300 beers on tap!</p>"
+    };
+
+    var piattisInfo = {
+        address: "Piattis, San Antonio",
+        popupHTML: "<p>The family owns it!</p>"
+    };
+
+    var placeArray = [alamoInfo, theFishMarketInfo, theFlyingSaucerInfo, piattisInfo]
+
+    function placeMarkerAndPopup(info, token, map) {
+        for (var i = 0; i<info.length; i++) {
+            var newInfo = info[i];
+            geocode(newInfo.address, token).then(function(coordinates) {
+                var popup = new mapboxgl.Popup()
+                    .setHTML(newInfo.popupHTML);
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map)
+                    .setPopup(popup);
+                popup.addTo(map);
+                marker.addTo(map);
+            });
+        };
+    }
+
+    placeMarkerAndPopup(placeArray, accessToken, map);
+
+
+
+
+</script>
+
+
+<!--<h1>My First Mapbox Map!</h1>-->
+
+<!-- The HTML element that serves as the Mapbox container -->
+<!--<div id='map'></div>-->
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+ <script src="https://github.com/mapbox/mapbox-gl-js/blob/5db490a263f7d2404ae097cb7f0060578895286b/src/ui/control/geolocate_control.js#L112-L675">
+
+
+    // mapboxgl.accessToken = YOUR_API_TOKEN_HERE;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [-98.4916, 29.4252]
+    // });
+</script>
+
+
+
+
+
+<!--<div id='map' style='width: 400px; height: 300px;'></div>-->
+<script>
+    // console.log((geocode("222 S Main St, Broken Arrow, OK 74012", token.valueOf())));
+    // Create a new marker.
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.4916, 29.4260])
+    //     .addTo(map);
+    // const marker = new mapboxgl.Marker()
+    //     .setLngLat(geocode("222 S Main St, Broken Arrow, OK 74012", token.valueOf()))
+    //     .addTo(map);
+    // mapboxgl.accessToken = YOUR_TOKEN_HERE;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [-98.4916, 29.4252]
+    // });
+
+
+    // var token = 'pk.eyJ1Ijoic3RhY2tjaXBoZXIiLCJhIjoiY2wycWxlbWkwMndldjNqc2J6MjhyZWpzaiJ9.Wlrrv9yH4lV6xnOG0jLWig';
+
+    // mapboxgl.accessToken = token.valueOf();
+    // const map = new mapboxgl.Map({
+    //     container: 'map', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [-74.5, 40], // starting position [lng, lat]
+    //     zoom: 9 // starting zoom
+    // });
+
+        // var marker = new mapboxgl.Marker()
+        //     .setLngLat([-98.4916, 29.4260])
+        //     .addTo(map);
+
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat([-98.4916, 29.4260])
+    //     .addTo(map);
+    // // Add the control to the map.
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+    );
+
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("222 S Main St, Broken Arrow, OK 74012", token.valueOf()).then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    });
+    // var marker = new mapboxgl.Marker()
+    //     .setLngLat(result)
+    //     .addTo(map);
+
+    // function placeMarkerAndPopup(info, token, map) {
+    //     geocode(info.address, token).then(function (coordinates) {
+    //         var popup = new mapboxgl.Popup()
+    //             .setHTML(info.popupHTML);
+    //         var marker = new mapboxgl.Marker()
+    //             .setLngLat(coordinates)
+    //             .addTo(map)
+    //             .setPopup(popup);
+    //         popup.addTo(map);
+    //     });
+        // }
+        // function reverseGeocode(coordinates, token) {
+        //     var baseUrl = 'https://api.mapbox.com';
+        //     var endPoint = '/geocoding/v5/mapbox.places/';
+        //     return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+        //         .then(function(res) {
+        //             return res.json();
+        //         })
+        //         // to get all the data from the request, comment out the following three lines...
+        //         .then(function(data) {
+        //             return data.features[0].place_name;
+        //         });
+        // }
+
+
+        // placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+</script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- link to the JS file for API key to be held separately-->
+<!--    <script src = "../IdeaProjects/weathermap-api-project/keys.js">-->
+
+<!--Bootstrap Library follows-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
