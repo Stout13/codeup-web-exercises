@@ -19,12 +19,28 @@
             height: 700px;
         }
     </style>
+
 <!--    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>-->
 <!--<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />-->
 
     <title>Document</title>
 </head>
 <body>
+<style>
+    .coordinates {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 11px;
+        line-height: 18px;
+        border-radius: 3px;
+        display: none;
+    }
+</style>
 <h1>My First Mapbox Map!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
@@ -129,6 +145,8 @@
 
 
 
+
+
 <!--<div id='map' style='width: 400px; height: 300px;'></div>-->
 <script>
     // console.log((geocode("222 S Main St, Broken Arrow, OK 74012", token.valueOf())));
@@ -179,6 +197,10 @@
         map.setCenter(result);
         map.setZoom(15);
     });
+
+
+
+
     // var marker = new mapboxgl.Marker()
     //     .setLngLat(result)
     //     .addTo(map);
