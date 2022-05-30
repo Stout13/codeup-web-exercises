@@ -1,13 +1,33 @@
 
+// await octokit.request('GET /users/{Stout13}/events/public', {
+//     username: 'STOUT13'
+// })
+console.log("hello");
+// function getGithubUsernames() {
+//     return fetch('https://api.github.com/users/Stout13/codeup-web-exercises/commits?per_page=1')
+//         .then(response => response.json())
+// }
 
-var data = (user) => {
-    fetch('https://api.github.com/users/Stout13',
-        {headers: {'Authorization': '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'}}).then(data => {
-        return(data);
-    });
-};
+// later on...
 
-console.log(data);
+// getGithubUsernames().then( users => {
+//     users.forEach( userObj => {
+//         // do something with each username
+//         console.log(userObj.login);
+//     });
+// }).catch(error => console.error(error));
+
+
+
+
+// https://stackoverflow.com/questions/67986923/how-to-display-the-name-of-the-latest-commit-on-github-to-my-website
+
+// fetch from above stack overflow fetches
+fetch('https://api.github.com/repos/Stout13/codeup-web-exercises/commits?per_page=1')
+    .then(res => res.json())
+    .then(res => {
+        document.getElementById('message').innerHTML = res[0].commit.message
+    })
 
 
 // Create a file named promises.js inside of your js directory and link it to an HTML file of your choice.
