@@ -1,0 +1,34 @@
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+/*<!--    Open up your welcome.html file from earlier.-->*/
+/*<!--    Center the main heading-->*/
+/*<!--    Add a style to change the color of the headers on your page and make them underlined.-->*/
+.myHeading {
+    text-decoration: underline;
+    color: green;
+}
+/*<!--    Add a style to change the background color of the page.-->*/
+body {
+    /*background-color: #8a4182;*/
+    background-image: url("/codeup-web-exercises/welcomeImgs/desert.jpg");
+}
+/*<!--    Add a style to add a background image to your background. -->*/
+
+/*<!--    Search how to manipulate the position, sizing of this background image.-->*/
+/*<!--    Add a style to change the list-style to something other than the default bullet.-->*/
+/*<!--    Add a style to change the font for the entire page. Use google fonts if you would like.-->*/
+/*<!--    Add a style to change the table, table cells td and rows tr padding and font sizes.-->*/
+/*<!--    Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).-->*/
+/*<!--    Continue experimenting with styles to increase the visual appeal of the page.-->*/
+/*<!--    Finally, commit the changes to your git repository, and push to GitHub.-->*/
+<!--    -->
+
