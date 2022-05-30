@@ -1,8 +1,31 @@
+// let reader = new FileReader();
+//
+// reader.readAsText(`GP1/passcode`, 'utf-8')
 
-// await octokit.request('GET /users/{Stout13}/events/public', {
+function previewFile() {
+    const content = document.querySelector('#message');
+    const [file] = "GP1/passcode"
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+        // this will then display a text file
+        content.innerText = reader.result;
+    }, false);
+
+    if (file) {
+        return reader.readAsText(file);
+    }
+}
+
+
+    // let ssh = previewFile();
+    // const octokit = new Octokit({
+    // auth: ssh
+// })
+// await octokit.request('GET /repos/:Stout13/:codeup-web-exercises/commits/main', {
 //     username: 'STOUT13'
 // })
-console.log("hello");
+console.log(previewFile());
 // function getGithubUsernames() {
 //     return fetch('https://api.github.com/users/Stout13/codeup-web-exercises/commits?per_page=1')
 //         .then(response => response.json())
@@ -44,9 +67,7 @@ fetch('https://api.github.com/repos/Stout13/codeup-web-exercises/commits?per_pag
 
 // // Octokit.js
 // // https://github.com/octokit/core.js#readme
-// const octokit = new Octokit({
-//     auth: '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3'
-// })
+
 //
 // await octokit.request('GET /repos/{owner}/{repo}/commits', {
 //     owner: 'Stout13',
