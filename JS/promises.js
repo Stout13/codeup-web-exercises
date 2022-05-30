@@ -2,30 +2,29 @@
 //
 // reader.readAsText(`GP1/passcode`, 'utf-8')
 
-function previewFile() {
-    const content = document.querySelector('#message');
-    const [file] = "GP1/passcode"
-    const reader = new FileReader();
-
-    reader.addEventListener("load", () => {
-        // this will then display a text file
-        content.innerText = reader.result;
-    }, false);
-
-    if (file) {
-        return reader.readAsText(file);
-    }
-}
+// function previewFile() {
+//     const content = document.querySelector('#message');
+//     const [file] = "GP1/passcode"
+//     const reader = new FileReader();
+//
+//     reader.addEventListener("load", () => {
+//         // this will then display a text file
+//         content.innerText = reader.result;
+//     }, false);
+// }
+// if (file) {
+//     return reader.readAsText(file);
+// }
 
 
     // let ssh = previewFile();
-    // const octokit = new Octokit({
-    // auth: ssh
+//     const octokit = new Octokit({
+//     auth: "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"
 // })
-// await octokit.request('GET /repos/:Stout13/:codeup-web-exercises/commits/main', {
-//     username: 'STOUT13'
+// octokit.request('GET /repos/:Stout13/:codeup-web-exercises/commits/main', {
+//     username: 'Stout13'
 // })
-console.log(previewFile());
+// console.log(previewFile());
 // function getGithubUsernames() {
 //     return fetch('https://api.github.com/users/Stout13/codeup-web-exercises/commits?per_page=1')
 //         .then(response => response.json())
@@ -50,7 +49,9 @@ fetch('https://api.github.com/repos/Stout13/codeup-web-exercises/commits?per_pag
     .then(res => res.json())
     .then(res => {
         document.getElementById('message').innerHTML = res[0].commit.message
-    })
+    }).then(res => {
+        console.log(res);
+})
 
 
 // Create a file named promises.js inside of your js directory and link it to an HTML file of your choice.
