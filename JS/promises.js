@@ -47,10 +47,13 @@
 // fetch from above stack overflow fetches
 fetch('https://api.github.com/repos/Stout13/codeup-web-exercises/commits?per_page=1')
     .then(res => res.json())
-    .then(res => {
-        document.getElementById('message').innerHTML = res[0].commit.message
-    }).then(res => {
-        console.log(res);
+    .then(
+        res => {
+        // res = JSON.parse(res[0].commit);
+        document.getElementById('message').innerHTML = (res[0].commit.author.date);
+    // })
+// .then(res => {
+        // console.log(res[0].commit.author);
 })
 
 
